@@ -1,0 +1,13 @@
+{% extends 'django_calendar/base.html' %}
+{% block content %}
+<style>
+.table {
+    table-layout: fixed;
+}
+</style>
+    <div class="container">
+        <p><a href="{% url 'django_calendar:withtime_week_calendar' date.year date.month 1 %}">週間カレンダーへ</a></p>
+        {{ calendar }}
+    </div>
+    
+{% endblock %}
