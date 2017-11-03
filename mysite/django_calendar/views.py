@@ -1,3 +1,5 @@
+# coding: UTF-8
+
 import datetime
 from collections import defaultdict
 from django.utils.safestring import mark_safe
@@ -74,7 +76,7 @@ class WeekCalendarView(generic.TemplateView):
         calendar = self.get_calendar(date)
         html = calendar.formatweek_table(int(week))
 
-        context = super().get_context_data(*args, **kwargs)
+        context = super(WeekCalendarView,self).get_context_data(*args, **kwargs)
         context['calendar'] = mark_safe(html)
         context['date'] = date
         return context

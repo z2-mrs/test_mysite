@@ -1,3 +1,5 @@
+# coding: UTF-8
+
 from django.conf.urls import url
 from django_calendar import views
 

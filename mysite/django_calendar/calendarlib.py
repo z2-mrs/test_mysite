@@ -1,5 +1,9 @@
 # coding: UTF-8
 
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+
 """カレンダーを作成するためのモジュール."""
 from calendar import month_name, monthrange, LocaleHTMLCalendar, TimeEncoding
 import datetime
